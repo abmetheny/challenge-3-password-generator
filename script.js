@@ -3,10 +3,10 @@ window.onload = () => {
   const upperCharacters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   const lowerCharacters = "abcdefghijklmnopqrstuvwxyz";
   const numberCharacters = "1234567890";
-  const specialCharacters = "\\!#$%&'()*+,-./:;<=>?@[]^_`{|}~\"";
+  const specialCharacters = " \\!#$%&'()*+,-./:;<=>?@[]^_`{|}~\"";
   var selectedCharacters = "";
 
-  const chooseLength = prompt("Choose a password length between 8-128 characters.");
+  const chooseLength = prompt("Choose a password length (must be between 8-128 characters).");
   if (chooseLength < 8) {
     alert("Password must be at least 8 characters.");
   }
@@ -30,19 +30,26 @@ window.onload = () => {
       if (confirmCharacter == true) {
         selectedCharacters += specialCharacters;
       }
+      if ((confirmLower == false) && (confirmUpper == false) && (confirmNumber == false) && (confirmCharacter == false)) {
+        alert("Password must contain at least one character type.");
+      }
   }
+
   console.log(selectedCharacters);
   
   function generatePassword() {
     var randomIndex = "";
-    for (var i = 0; i < chooseLength.length; i++) {
+    for (var i = 0; i < chooseLength; i++) {
       randomIndex += selectedCharacters[Math.floor(Math.random() * selectedCharacters.length)];
+      console.log(randomIndex);
     } 
     return randomIndex;
   }
 
-  const password = generatePassword();
-  alert("New password: ", password);
+
+  var password = generatePassword();
+  console.log(password);
+  // alert("New password: "+ password);
 
     // Write password to the #password input
   function writePassword() {
