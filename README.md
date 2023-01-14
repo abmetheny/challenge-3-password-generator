@@ -1,7 +1,5 @@
 # challenge-3-password-generator
 Randomly generates strong user passwords
-# challenge-2-professional-portfolio
-Repository containing a simple HTML page that uses JavaScript to produce a random, unique password based on parameters set by a user through a series of alert pop-ups. 
 
 ## User Story
 AS AN employee with access to sensitive data  
@@ -30,15 +28,16 @@ THEN the password is either displayed in an alert or written to the page
 To accompany the provided HTML and CSS files, wrote a JavaScript file that accomplishes the following:
 * Upon clicking the "Generate Password" button, the user is prompted to input a password length
 * Through a series of alerts, the user can select whether or not to include lowercase letters, uppercase letters, numbers, and/or special characters in the password output
-* The user gets an error message when:
+* The user gets error messages in the following circumstances:
   * Selected password length is less than 8 characters
   * Selected password length is greater than 128 characters
+  * Selected password length is not a number
   * No character types have been selected to be included in the password
 * A random, unique password is created based on user-selected parameters
 * The password is displayed in the text field box 
 
 ## Link to deployed GitHub page
-[Deployed Challenge 3 Password Generator Repo](https://github.com/abmetheny/challenge-3-password-generator)
+[Deployed Challenge 3 Password Generator Repo](https://abmetheny.github.io/challenge-3-password-generator/)
 
 ## Screenshots
 <img src="./assets/images/Screenshot1.png">
