@@ -28,14 +28,14 @@ THEN the password is either displayed in an alert or written to the page
 ## Description of Work Performed
 
 To accompany the provided HTML and CSS files, wrote a JavaScript file that accomplishes the following:
-* Upon loading the page, the user is prompted to input a password length
-* Through a series of alerts, a user can select whether or not to include lowercase letters, uppercase letters, numbers, and/or special characters in the password output
+* Upon clicking the "Generate Password" button, the user is prompted to input a password length
+* Through a series of alerts, the user can select whether or not to include lowercase letters, uppercase letters, numbers, and/or special characters in the password output
 * The user gets an error message when:
   * Selected password length is less than 8 characters
   * Selected password length is greater than 128 characters
   * No character types have been selected to be included in the password
 * A random, unique password is created based on user-selected parameters
-* The password is displayed in the text field box when the button is clicked
+* The password is displayed in the text field box 
 
 ## Link to deployed GitHub page
 [Deployed Challenge 3 Password Generator Repo](https://github.com/abmetheny/challenge-3-password-generator)
