@@ -31,11 +31,14 @@ window.onload = () => {
     const confirmCharacter = confirm("Include special characters?");
       if (confirmCharacter == true) {
         selectedCharacters += specialCharacters;
+        alert("Password ready.  Click the \"Generate Password\" button to display.");
       }
-      if ((confirmLower == false) && (confirmUpper == false) && (confirmNumber == false) && (confirmCharacter == false)) {
+      else if ((confirmLower == false) && (confirmUpper == false) && (confirmNumber == false) && (confirmCharacter == false)) {
         alert("Password must contain at least one character type.  Refresh the page and start again.");
       }
+      else {
       alert("Password ready.  Click the \"Generate Password\" button to display.");
+    }
   }
 
   // Randomly selects characters from the subset of user-defined character types.
@@ -54,8 +57,8 @@ window.onload = () => {
     passwordText.value = password;
   }
 
-// Adds event listener to generate button
-const generateBtn = document.querySelector("#generate");
-generateBtn.addEventListener("click", writePassword);
+  // Adds event listener to generate button
+  const generateBtn = document.querySelector("#generate");
+  generateBtn.addEventListener("click", writePassword);
 
 }
